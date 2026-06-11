@@ -8,10 +8,11 @@ st.title('RYAN T STORES ')
 st.write("iPHONE REVENUE PREDICTION SYSTEM")
 
 
-BASE_DIR = os.path.dirname(__file__) 
-model_path = os.path.join(BASE_DIR, "iphone_revenue_model.pkl")
-
-
+if os.path.exists("iphone_revenue_model.pkl"):
+    model = joblib.load("iphone_revenue_model.pkl")
+else:
+    st.error("Model file not found")
+    st.stop()
 
 country = st.selectbox( 
 'Country', 
