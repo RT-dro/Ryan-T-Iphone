@@ -12,9 +12,6 @@ BASE_DIR = os.path.dirname(__file__)
 model_path = os.path.join(BASE_DIR, "iphone_revenue_model.pkl")
 
 
-model = joblib.load(r"C:\Users\RYAN T\Desktop\Noteboks\iphone_revenue_model.pkl")
-
-
 
 country = st.selectbox( 
 'Country', 
