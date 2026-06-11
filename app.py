@@ -5,14 +5,8 @@ import os
 st.title('RYAN T STORES ') 
 st.write("iPHONE REVENUE PREDICTION SYSTEM")
 
-BASE_DIR = os.path.dirname(__file__)
-model_path = os.path.join(BASE_DIR, "iphone_revenue_model.pkl")
+model = joblib.load(r"C:\Users\RYAN T\Desktop\Noteboks\iphone_revenue_model.pkl")
 
-try:
-    model = joblib.load(r"C:\Users\RYAN T\Desktop\Noteboks\iphone_revenue_model.pkl")
-except:
-    st.error("Model file not found. Place heart_disease_model.pkl in the app folder.")
-    st.stop()
 
 
 country = st.selectbox( 
